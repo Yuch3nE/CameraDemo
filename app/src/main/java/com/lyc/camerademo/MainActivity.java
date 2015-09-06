@@ -127,7 +127,8 @@ public class MainActivity extends AppCompatActivity{
 
             @Override
             public void surfaceDestroyed(SurfaceHolder surfaceHolder) {
-
+                mCamera.release();
+                mCamera = null;
             }
         });
         mSurfaceHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
